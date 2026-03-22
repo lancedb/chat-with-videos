@@ -58,3 +58,13 @@ select = ["E", "F", "I", "W"]
 python_version = "3.10"
 strict = false
 ignore_missing_imports = true
+
+[tool.uv]
+# Use CPU-only PyTorch to avoid pulling in multi-GB NVIDIA CUDA libraries
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
