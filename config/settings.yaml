@@ -1,0 +1,23 @@
+# Video source configuration
+playlist:
+  url: "https://www.youtube.com/playlist?list=PLSE8ODhjZXjZEVnVTtgDWw6P3wA_gDwj4"
+  name: "cmu-database-course"
+
+# Embedding configuration (local CPU model)
+embedding:
+  model_name: "BAAI/bge-base-en-v1.5"
+  batch_size: 64
+  normalize: true
+
+# Transcript chunking settings
+transcripts:
+  languages: ["en"]
+  chunk_duration_seconds: 30.0  # Duration of each chunk for embedding
+
+# Video download settings
+video:
+  format: "bestvideo[height<=720]+bestaudio/best[height<=720]"
+
+# Search settings
+search:
+  default_limit: 10
