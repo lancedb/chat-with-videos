@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+/lib/
 lib64/
 parts/
 sdist/
@@ -230,3 +230,6 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local
+.claude/settings.local.json
